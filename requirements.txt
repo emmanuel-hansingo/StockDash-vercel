@@ -4,4 +4,4 @@ gunicorn
 pandas
 plotly
 yfinance
-pandas-datareader
+
