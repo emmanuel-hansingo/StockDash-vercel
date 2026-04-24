@@ -216,8 +216,9 @@ def update_ohlc_graph(n_clicks, stock_ticker, start_date, end_date):
     )
     return fig
 
+app = server
 
-if __name__ == '__main__':
-    app.run_server()
+#if __name__ == '__main__':
+    #app.run_server()
 
 
