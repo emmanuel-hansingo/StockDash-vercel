@@ -18,8 +18,18 @@ from plotly.subplots import make_subplots
 from datetime import datetime
 import pandas as pd
 import yfinance as yf
+from flask import Flask
+from dash import Dash
 
-app = dash.Dash()
+server = Flask(__name__)
+
+app = Dash(
+    __name__,
+    server=server,
+    requests_pathname_prefix="/"
+)
+
+#app = dash.Dash()
 
 nsdq = pd.read_csv("NASDAQcompanylist.csv")
 nsdq.set_index('Symbol', inplace=True)
