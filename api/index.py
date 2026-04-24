@@ -118,7 +118,7 @@ def update_graph(n_clicks, stock_ticker, start_date, end_date):
     end = pd.to_datetime(end_date[:10],format='%Y-%m-%d').date()
     traces = []
     for tic in stock_ticker:
-        df = yf.download(tic, start= start, end= end)['Adj Close']
+        df = yf.download(tic, start= start, end= end)['Close']
         df = pd.DataFrame(df)
         df.columns = ['Close']
         #df = web.get_data_yahoo(tic, start=start_date, end=end_date)
