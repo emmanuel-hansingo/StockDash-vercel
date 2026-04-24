@@ -11,7 +11,7 @@ import dash
 from dash import dcc
 from dash import html
 from dash import Input, Output, State
-import pandas_datareader.data as web # requires v0.6.0 or later
+#import pandas_datareader.data as web # requires v0.6.0 or later
 from plotly.figure_factory import create_ohlc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
