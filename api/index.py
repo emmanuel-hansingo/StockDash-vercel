@@ -112,7 +112,9 @@ app.layout = html.Div([
     [Input('submit-button', 'n_clicks')],
     [State('my_ticker_symbol', 'value'),
     State('my_date_picker', 'start_date'),
-    State('my_date_picker', 'end_date')])
+    State('my_date_picker', 'end_date')],
+    prevent_initial_call = True
+)
 def update_graph(n_clicks, stock_ticker, start_date, end_date):
     start = pd.to_datetime(start_date[:10],format='%Y-%m-%d').date()
     end = pd.to_datetime(end_date[:10],format='%Y-%m-%d').date()
